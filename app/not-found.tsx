@@ -1,9 +1,6 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import css from "./Home.module.css";
-import { useEffect } from "react";
 import { Metadata } from "next";
+import ClientRedirect from "./NotFound.client";
 
 export const metadata: Metadata = {
   title: "Non-existent page",
@@ -31,13 +28,6 @@ export const metadata: Metadata = {
 };
 
 const NotFound = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    const timer = setTimeout(() => router.push("/"), 3000);
-    return () => clearTimeout(timer);
-  }, [router]);
-
   return (
     <>
       <h1 className={css.title}>404 - Page not found</h1>
@@ -47,6 +37,7 @@ const NotFound = () => {
         <br />
         You will be redirected to the homepage in a while
       </p>
+      <ClientRedirect />
     </>
   );
 };
