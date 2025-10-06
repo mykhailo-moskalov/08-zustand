@@ -20,3 +20,9 @@ export interface NoteFormValues {
   content: string;
   tag: NoteTag;
 }
+
+export interface newNoteValues {
+  title: string;
+  content: string;
+  tag: NoteTag;
+}

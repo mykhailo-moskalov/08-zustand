@@ -1,4 +1,4 @@
-import type { Note, NoteFormValues } from "../types/note";
+import type { newNoteValues, Note, NoteFormValues } from "../types/note";
 import axios from "axios";
 
 interface NotesHTTPResponse {
@@ -44,7 +44,7 @@ export const createNote = async ({
   content,
   tag,
 }: NoteFormValues): Promise<Note> => {
-  const newNote = { title, content, tag };
+  const newNote: newNoteValues = { title, content, tag };
 
   const resp = await axios.post<Note>("/notes", newNote, {
     headers: {
