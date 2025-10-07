@@ -21,10 +21,10 @@ export async function generateMetadata({
 
   return {
     title: title,
-    description: `Filter: ${tag.toLocaleLowerCase()}`,
+    description: `Filter: ${tag}`,
     openGraph: {
       title: title,
-      description: `Filter: ${tag.toLocaleLowerCase()}`,
+      description: `Filter: ${tag}`,
       url: `https://08-zustand-eight-pi.vercel.app/notes/filter/${tag}`,
       siteName: "NoteHub",
       images: [
@@ -40,7 +40,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: title,
-      description: `Filter: ${tag.toLocaleLowerCase()}`,
+      description: `Filter: ${tag}`,
       images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
     },
   };
