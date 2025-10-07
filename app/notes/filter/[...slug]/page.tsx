@@ -25,7 +25,7 @@ export async function generateMetadata({
     openGraph: {
       title: title,
       description: `Filter: ${tag.toLocaleLowerCase()}`,
-      url: `/app/notes/filter/[...slug]`,
+      url: `https://08-zustand-eight-pi.vercel.app/notes/filter/${tag}`,
       siteName: "NoteHub",
       images: [
         {
